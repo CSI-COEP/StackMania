@@ -9,7 +9,7 @@ import Dashboard from './Components/Pages/Dashboard';
 
 function App() {
 
- 
+  
   return (
     <>
     <BrowserRouter>
@@ -21,6 +21,7 @@ function App() {
      <Route path='/login' element={<Login/>}></Route>
      <Route path='/adminlogin' element={<Adminlogin/>}></Route>
      <Route path='adminlogin/dashboard' element={<Dashboard/>}></Route>
+   
      
     </Routes>
     </BrowserRouter>
