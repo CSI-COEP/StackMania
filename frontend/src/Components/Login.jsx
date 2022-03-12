@@ -31,7 +31,7 @@ const Login = () => {
       <div className="big-signup-div">
         <div className="signup-card" data-aos="fade-down">
           <box-icon name="user-circle" type="filled" color="#0471d3"></box-icon>
-          <p className="signup-header">Login</p>
+          <p className="signup-header">User Login</p>
 
           <input
             value={username}
@@ -51,10 +51,14 @@ const Login = () => {
           <button onClick={onSignInClicked} className="signup-btn">
             LOGIN
           </button>
-
+            <div className="policeadmin">
           <Link to="/adminlogin" className="admin-login-text">
             ↗️Admin Login
           </Link>
+          <Link to="/policelogin" className="admin-login-text">
+            ↗️Police Login
+          </Link>
+          </div>
         </div>
       </div>
     </>

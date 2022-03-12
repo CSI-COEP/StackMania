@@ -7,8 +7,9 @@
 
 :root {
   --primary-font: "Inter", sans-serif;
-  --primary-color: rgb(4, 65, 199);
+  --primary-color: rgb(110, 52, 5);
 }
+
 
 a {
   text-decoration: none;
@@ -16,18 +17,18 @@ a {
 }
 .navbar-div {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 .logo {
   width: 4rem;
 }
-.header-div {
+.Header-div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header {
+.Header {
   font-family: var(--primary-font);
   font-size: 2rem;
   font-weight: 700;
@@ -51,6 +52,7 @@ a {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  margin-left: 30rem;
 }
 
 .big-home-div {
@@ -58,15 +60,15 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 0 3rem 0 3rem;
-  background: #000000;
-  background: -webkit-linear-gradient(to right, #0f0f0f, #e7893c, #000000);
-  background: linear-gradient(to right, #2b2b2b, #e7893c, #000000);
+  background-image: url("../public/Images/justice.png");
+  height: 100vh;
+  background-size: cover;
 }
 .welcome-note {
   font-family: var(--primary-font);
   font-size: 3rem;
-  color: white;
-  font-weight: 550;
+  color: rgb(82, 22, 4);
+  font-weight: 650;
   padding: 1rem;
 }
 p {
@@ -74,7 +76,7 @@ p {
 }
 
 .home-right-img {
-  width: 50%;
+  width: 80%;
 }
 .justicelogo {
   width: 10rem;
@@ -107,7 +109,7 @@ input {
 .signup-btn {
   padding: 0.5rem 1.2rem 0.5rem 1.2rem;
   border-radius: 0.2rem;
-  background-color: var(--primary-color);
+  background-color: rgb(0, 81, 255);
   color: white;
   border: none;
   -webkit-box-shadow: 10px 10px 51px 1px rgba(179, 179, 179, 1);
@@ -134,14 +136,7 @@ input {
   text-decoration: underline;
   margin-top: 2rem;
 }
-select {
-  padding: 0.3rem 1rem 0.3rem 1rem;
-  border: none;
-  margin-left: 1rem;
-}
-.option {
-  padding: 0.3rem 1rem 0.3rem 1rem;
-}
+
 .card {
   padding: 3rem;
   background: #ee0979;
@@ -263,4 +258,132 @@ select {
   gap: 3rem;
   background-color: rgb(0, 0, 126);
   padding: 4rem;
+}
+.footer-header{
+  font-family: var(--primary-font);
+  font-weight: 600;
+  text-align: center;
+  color: var(--primary-color);
+}
+.footer-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem;
+}
+.footer-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.policeadmin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.credit-div{
+  padding: 0.5rem;
+  font-family: var(--primary-font);
+
+}
+.line{
+  display: block;
+  width: 1.5rem;
+  height: 0.2rem;
+  background-color: rgb(131, 70, 1);
+  margin: 0.3rem auto; 
+  
+}
+@media screen and (max-width:768px){
+  
+  .hamburger{
+      display: block;
+      cursor: pointer;
+  }
+  header.sticky a{
+    color: rgb(255, 255, 255);
+     
+  }
+  .menu-div{
+      position: fixed;
+      left: -100%;
+      width: 100%;
+      height: 100vh;
+      top: 0.1rem;
+      display: flex;
+      
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      transition: all 0.4s;
+      color: white;
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(25px);
+      background-color:rgba(70, 34, 2, 0.993);
+      
+  }
+ 
+  .navbar-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .menu-div li{
+    padding: 0;
+  }
+  .menu-div.active{
+      left: 0;
+  }
+  .item{
+      margin: 2rem 0;
+  }
+  .hamburger.active .line:nth-child(2){
+  opacity: 0;
+  }
+  .hamburger.active .line:nth-child(1){
+      transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .line:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg);
+  }
+
+
+  .navbar-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .signup-card{
+    width: 75%;
+  }
+  .dashboard-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+  .card-all{
+    position: initial;
+  }
+    
+  .biggest-createprofile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .big-createprofile{
+    width: 100%;
+    padding: 3rem;
+  }
+  .case-list-div{
+    width: 95%;
+  }
+  
 }

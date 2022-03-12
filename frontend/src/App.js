@@ -8,6 +8,7 @@ import Login from "./Components/Login";
 import Navbar from "./Components/Navbar";
 import Adminlogin from "./Components/Adminlogin";
 import Dashboard from "./Components/Pages/Dashboard";
+import Footer from "./Components/Footer";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAO-kgOwStk6cpclFC9WsctI2p26xqpYlw",
@@ -32,8 +33,9 @@ function App() {
 
           <Route path="/login" element={<Login />}></Route>
           <Route path="/adminlogin" element={<Adminlogin />}></Route>
-          <Route path="admin" element={<Dashboard />}></Route>
+          <Route path="/admin" element={<Dashboard />}></Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );

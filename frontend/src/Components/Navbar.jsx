@@ -21,26 +21,33 @@ const Navbar = () => {
   }, []);
 
   return (
+
     <div className="navbar-div">
-      <div className="header-div">
+      <div className="Header-div">
         <img src="/Images/DigiCourt.png" className="logo" alt="logo"></img>
-        <p className="header">DigiCourt</p>
+        <p className="Header">DigiCourt</p>
       </div>
       <div className="menu-div">
         <Link to="/">
-          <li>HOME</li>
+          <li className="item">HOME</li>
         </Link>
         {loggedIn ? (
           <div onClick={onLogoutClick}>
-            <li>LOGOUT</li>
+            <li className="item">LOGOUT</li>
           </div>
         ) : (
           <Link to="/login">
-            <li>LOGIN</li>
+            <li className="item">LOGIN</li>
           </Link>
         )}
       </div>
+      <div className="hamburger">
+              <span className="line"></span>
+              <span className="line"></span>
+              <span className="line"></span>
+            </div>
     </div>
+
   );
 };
 
