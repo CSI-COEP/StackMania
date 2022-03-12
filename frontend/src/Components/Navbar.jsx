@@ -16,7 +16,6 @@ const Navbar = () => {
     getAuth().onAuthStateChanged((user) => {
       if (user) {
         setLoggedIn(true);
-        navigate("/profile");
       }
     });
   }, []);

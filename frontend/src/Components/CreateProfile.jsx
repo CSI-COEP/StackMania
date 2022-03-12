@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import axios from "axios";
 
 export default class CreateProfile extends Component {
   state = {
@@ -10,7 +9,7 @@ export default class CreateProfile extends Component {
     password: "",
   };
 
-  profile = (e) => {
+  profile = async (e) => {
     e.preventDefault();
     if (
       !["LAWYER", "ADVOCATE", "SUBADMIN", "POLICE", "USER", "JUDGE"].includes(
@@ -21,6 +20,24 @@ export default class CreateProfile extends Component {
         "You can Only create profile of Judge,Lawyer,Advocate,User and Subadmins"
       );
       return;
+    }
+
+    try {
+      const res = await axios.request({
+        method: "POST",
+        url: "/admin/add-user",
+        data: {
+          role: this.state.role,
+          name: this.state.name,
+          email: this.state.mail,
+          password: this.state.password,
+        },
+      });
+
+      alert("created");
+    } catch (error) {
+      console.log(error);
+      alert("Can't create profile");
     }
 
     this.setState({ role: "", name: "", mail: "", password: "" });
