@@ -3,6 +3,7 @@ import cors from "cors";
 import express, { NextFunction, Response } from "express";
 import { CourtRequest } from "../typings/custom";
 import { verifyToken } from "./lib/auth";
+import AdminRoute from "./routes/AdminRoute";
 const app = express();
 
 app.use(cors());
@@ -26,6 +27,9 @@ app.use(async (req: CourtRequest, res: Response, next: NextFunction) => {
   next();
 });
 
+app.use("/admin", AdminRoute);
+app.use("/case", CaseRoute);
+
 app.get("/", async (req, res) => {
   res.json({ message: "Hello World" });
 });
@@ -33,3 +37,6 @@ app.get("/", async (req, res) => {
 app.listen(process.env.PORT || 3000, () =>
   console.log(`🚀 Server ready at: ${process.env.PORT || 3000}`)
 );
+function CaseRoute(arg0: string, CaseRoute: any) {
+  throw new Error("Function not implemented.");
+}
