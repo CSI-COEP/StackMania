@@ -4,6 +4,8 @@ import cors from "cors";
 import { verifyToken } from "./lib/auth";
 import { CourtRequest } from "../typings/custom";
 
+import "./lib/database/database";
+
 const app = express();
 
 app.use(cors());

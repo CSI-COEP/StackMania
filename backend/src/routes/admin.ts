@@ -1,8 +1,7 @@
 import { Router } from "express";
 import { CourtRequest } from "../../typings/custom";
 import { createUser } from "../lib/auth";
-import { addUser } from "../lib/database";
-import prisma from "../lib/prisma";
+import { addUser, findUser } from "../lib/database/database";
 
 const router = Router();
 
@@ -12,23 +11,19 @@ router.post("/add-user", async (req: CourtRequest, res) => {
       error: true,
       message: "Not logged in",
     });
+    return;
   }
 
   const { email, password, role } = req.body;
 
-  const user = await prisma.user.findUnique({
-    where: {
-      email,
-      isMainAdmin: true,
-      role: "MAIN_ADMIN",
-    },
-  });
+  const user = await findUser(req.user?.email!!, "MAIN_ADMIN");
 
   if (!user) {
     res.status(401).json({
       error: true,
       message: "Unauthorized",
     });
+    return;
   }
 
   const createdUser = await createUser(email, password);
