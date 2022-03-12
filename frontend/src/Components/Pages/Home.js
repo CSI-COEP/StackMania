@@ -5,11 +5,7 @@ const Home = () => {
 
   
   
-    const [age, setAge] = React.useState('');
-  
-    const handleChange = (event) => {
-      setAge(event.target.value);
-    };
+    
   
   return (
   <>

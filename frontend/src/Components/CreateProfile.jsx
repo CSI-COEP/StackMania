@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+import Aos from 'aos';
+import "aos/dist/aos.css"
 
 export default class CreateProfile extends Component {
-
+  
   state = {
     role : "",
     name : "",
@@ -23,7 +25,7 @@ export default class CreateProfile extends Component {
     return (
       <>
       <div style={{display:"flex",justifyContent:"center",alignItems:"center"}} className="biggest-createprofile">
-      <div className='big-createprofile'>
+      <div className='big-createprofile' data-aos="fade-up">
           <h2>Create Profiles</h2>
           <p>Create Profiles for Judges,Lawyers,Users,Subadmins and respective departments</p>
        <form className='createprofile-form' onSubmit={this.profile}>
@@ -35,7 +37,7 @@ export default class CreateProfile extends Component {
        </form>
       </div>
 
-      <div className='case-list-div'>
+      <div className='case-list-div' data-aos="fade-up">
         <h2>Cases Received from Police</h2>
         <li>Case 1</li>
         <li>Case 2</li>

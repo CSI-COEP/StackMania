@@ -1,15 +1,20 @@
 import React from 'react'
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom'
-
-const adminlogin = () => {
-
+import Aos from 'aos';
+import "aos/dist/aos.css"
+const Adminlogin = () => {
+  
+ useEffect(() => {
+   Aos.init({duration:1500})
+ },[])
 
   
   return (
     <>
     
     <div className='big-signup-div'>
-        <div className='signup-card'>
+        <div className='signup-card' data-aos="fade-down">
         <box-icon name='user-circle' type='filled' color='#0471d3' ></box-icon>
             <p className='signup-header'>Admin Login</p>
             
@@ -23,4 +28,4 @@ const adminlogin = () => {
   )
 }
 
-export default adminlogin
+export default Adminlogin
