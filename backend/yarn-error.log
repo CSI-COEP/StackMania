@@ -1,0 +1,36 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Piyush\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js init
+
+PATH: 
+  C:\Users\Piyush\Downloads\WINDOWS.X64_193000_db_home\bin;C:\Program Files\Lapce\;C:\Python310\Scripts\;C:\Python310\;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\PuTTY\;C:\Program Files\CMake\bin;C:\TDM-GCC-64\bin;C:\Program Files\Go\bin;C:\Program Files (x86)\dotnet\;C:\ProgramData\chocolatey\lib\Elixir/bin;C:\Program Files\erl-24.0\bin;C:\Program Files (x86)\Elixir\bin;C:\Users\Piyush\.mix\escripts;C:\Program Files\VSCodium\bin;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Program Files\Cloudflare\Cloudflare WARP\;C:\Users\Piyush\AppData\Local\Microsoft\WindowsApps;C:\Users\Piyush\AppData\Roaming\npm;C:\Users\Piyush\AppData\Local\Programs\oh-my-posh\bin;C:\Users\Piyush\AppData\Local\Programs\oh-my-posh\themes;C:\Users\Piyush\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\GitHub CLI;C:\Users\Piyush\AppData\Roaming\Python\Python310\site-packages;C:\Users\Piyush\AppData\Roaming\Python\Python310\scripts;C:\tools\flutter\bin;C:\Users\Piyush\AppData\Local\GitHubDesktop\bin;C:\tools\neovim\Neovim\bin;C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin;C:\Users\Piyush\go\bin;C:\Users\Piyush\AppData\Local\Programs\Hyper\resources\bin;C:\Users\Piyush\AppData\Local\atom\bin;C:\Program Files\Sublime Text;C:\Users\Piyush\AppData\Local\Programs\Microsoft VS Code Insiders\bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.13.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (C:\Users\Piyush\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:137143:13)
+      at Interface.emit (node:events:390:28)
+      at Interface._ttyWrite (node:readline:1081:16)
+      at ReadStream.onkeypress (node:readline:288:10)
+      at ReadStream.emit (node:events:390:28)
+      at emitKeys (node:internal/readline/utils:358:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (node:internal/readline/emitKeypressEvents:61:36)
+      at ReadStream.emit (node:events:390:28)
+      at addChunk (node:internal/streams/readable:315:12)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
