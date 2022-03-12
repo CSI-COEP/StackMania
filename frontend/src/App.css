@@ -1,86 +1,85 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
-:root{
-   --primary-font:"Inter",sans-serif;
-   --primary-color:rgb(4, 65, 199);
+:root {
+  --primary-font: "Inter", sans-serif;
+  --primary-color: rgb(4, 65, 199);
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
-.navbar-div{
+.navbar-div {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.logo{
+.logo {
   width: 4rem;
 }
-.header-div{
+.header-div {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
-.header{
+.header {
   font-family: var(--primary-font);
   font-size: 2rem;
   font-weight: 700;
-  color: var(--primary-color)
+  color: var(--primary-color);
 }
-.menu-div li{
+.menu-div li {
   font-family: var(--primary-font);
   list-style: none;
   padding: 0.7rem;
   transition: all 0.5s;
 }
-.menu-div li:hover{
+.menu-div li:hover {
   font-family: var(--primary-font);
   list-style: none;
   background-color: #e7893c;
   padding: 0.7rem;
   border-radius: 0.7rem;
 }
-.menu-div{
+.menu-div {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
 
-.big-home-div{
+.big-home-div {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 3rem 0 3rem;
-  background: #000000;  
-background: -webkit-linear-gradient(to right, #0f0f0f, #e7893c,#000000 );  
-background: linear-gradient(to right,#2b2b2b, #e7893c,#000000); 
-
-
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #0f0f0f, #e7893c, #000000);
+  background: linear-gradient(to right, #2b2b2b, #e7893c, #000000);
 }
-.welcome-note{
+.welcome-note {
   font-family: var(--primary-font);
   font-size: 3rem;
   color: white;
   font-weight: 550;
   padding: 1rem;
 }
-p{color: white;}
-
-.home-right-img{
-  width: 50%
+p {
+  color: white;
 }
-.justicelogo{
+
+.home-right-img {
+  width: 50%;
+}
+.justicelogo {
   width: 10rem;
 }
-.signup-card{
+.signup-card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,129 +88,125 @@ p{color: white;}
   background-color: white;
   padding: 3rem 1rem 3rem 1rem;
   width: 25%;
-  
 }
-.big-signup-div{
-  background: #F3904F;  
-background: -webkit-linear-gradient(to right, #3B4371, #F3904F); 
-background: linear-gradient(to right, #3B4371, #F3904F); 
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-font-family: var(--primary-font);
+.big-signup-div {
+  background: #f3904f;
+  background: -webkit-linear-gradient(to right, #3b4371, #f3904f);
+  background: linear-gradient(to right, #3b4371, #f3904f);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--primary-font);
 }
-input{
-  padding:  0.5rem 1.8rem  0.5rem 1.8rem;
+input {
+  padding: 0.5rem 1.8rem 0.5rem 1.8rem;
   font-size: 1rem;
 }
 
-.signup-btn{
+.signup-btn {
   padding: 0.5rem 1.2rem 0.5rem 1.2rem;
   border-radius: 0.2rem;
   background-color: var(--primary-color);
   color: white;
   border: none;
-  -webkit-box-shadow: 10px 10px 51px 1px rgba(179,179,179,1);
--moz-box-shadow: 10px 10px 51px 1px rgba(179,179,179,1);
-box-shadow: 10px 10px 51px 1px rgba(179,179,179,1);
+  -webkit-box-shadow: 10px 10px 51px 1px rgba(179, 179, 179, 1);
+  -moz-box-shadow: 10px 10px 51px 1px rgba(179, 179, 179, 1);
+  box-shadow: 10px 10px 51px 1px rgba(179, 179, 179, 1);
 }
-.signup-btn:active{
+.signup-btn:active {
   padding: 0.6rem 1.3rem 0.6rem 1.3rem;
   background-color: rgb(44, 95, 206);
   transition: all 0.5s;
   color: white;
   border: none;
-  -webkit-box-shadow: 10px 10px 51px 1px rgba(179,179,179,1);
--moz-box-shadow: 10px 10px 51px 1px rgba(179,179,179,1);
-box-shadow: 10px 10px 51px 1px rgba(179,179,179,1);
+  -webkit-box-shadow: 10px 10px 51px 1px rgba(179, 179, 179, 1);
+  -moz-box-shadow: 10px 10px 51px 1px rgba(179, 179, 179, 1);
+  box-shadow: 10px 10px 51px 1px rgba(179, 179, 179, 1);
 }
-.signup-header{
+.signup-header {
   color: #0f0f0f;
   font-family: var(--primary-font);
   font-size: 1.3rem;
 }
-.admin-login-text{
+.admin-login-text {
   color: rgb(0, 60, 255);
   text-decoration: underline;
   margin-top: 2rem;
 }
-select{
+select {
   padding: 0.3rem 1rem 0.3rem 1rem;
   border: none;
   margin-left: 1rem;
 }
-.option{
+.option {
   padding: 0.3rem 1rem 0.3rem 1rem;
 }
-.card{
+.card {
   padding: 3rem;
-  background: #ee0979; 
-background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  
-background: linear-gradient(to right, #ff6a00, #ee0979); 
+  background: #ee0979;
+  background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+  background: linear-gradient(to right, #ff6a00, #ee0979);
   margin-top: 5rem;
   width: 15rem;
   border-radius: 1rem;
   text-align: center;
   color: white;
 }
-.dashboard-div{
+.dashboard-div {
   padding: 2rem 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  background: #D3CCE3;
-background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  
-background: linear-gradient(to right, #E9E4F0, #D3CCE3); 
-
+  background: #d3cce3;
+  background: -webkit-linear-gradient(to right, #e9e4f0, #d3cce3);
+  background: linear-gradient(to right, #e9e4f0, #d3cce3);
 }
-.card p{
+.card p {
   font-size: 1.2rem;
   font-family: var(--primary-font);
 }
-.card-purple p{
+.card-purple p {
   font-size: 1.2rem;
   font-family: var(--primary-font);
 }
-.card-green p{
+.card-green p {
   font-size: 1.2rem;
   font-family: var(--primary-font);
 }
-.card-purple{
-  background: #6a3093;  
-  background: -webkit-linear-gradient(to right, #a044ff, #6a3093); 
-  background: linear-gradient(to right, #a044ff, #6a3093); 
+.card-purple {
+  background: #6a3093;
+  background: -webkit-linear-gradient(to right, #a044ff, #6a3093);
+  background: linear-gradient(to right, #a044ff, #6a3093);
   margin-top: 5rem;
   width: 15rem;
   border-radius: 1rem;
   text-align: center;
   color: white;
   padding: 3rem;
-  
 }
 
-.card-green{
-  background: #ADD100; 
-background: -webkit-linear-gradient(to right, #7B920A, #ADD100);  
-background: linear-gradient(to right, #7B920A, #ADD100); 
-margin-top: 5rem;
-width: 15rem;
-border-radius: 1rem;
-text-align: center;
-color: white;
-padding: 2.85rem;
+.card-green {
+  background: #add100;
+  background: -webkit-linear-gradient(to right, #7b920a, #add100);
+  background: linear-gradient(to right, #7b920a, #add100);
+  margin-top: 5rem;
+  width: 15rem;
+  border-radius: 1rem;
+  text-align: center;
+  color: white;
+  padding: 2.85rem;
 }
 
-.card-all:hover{
- transform: translateY(-2%);
- transition: all 0.5s;
- 
+.card-all:hover {
+  transform: translateY(-2%);
+  transition: all 0.5s;
 }
-.big-createprofile{
+.big-createprofile {
   font-family: var(--primary-font);
   display: flex;
-  margin-top:2rem;
+  margin-top: 2rem;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -222,28 +217,25 @@ padding: 2.85rem;
   margin-top: 1rem;
   background-color: white;
 }
-.big-createprofile p{
+.big-createprofile p {
   color: #0f0f0f;
   text-align: center;
-
-
 }
-.createprofile-form{
+.createprofile-form {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 1rem;
   padding-top: 1rem;
-  
 }
-.case-list-div li{
+.case-list-div li {
   list-style: none;
   font-family: var(--primary-font);
   padding: 0.5rem 7rem 0.5rem 7rem;
   border: 0.08rem solid rgb(138, 138, 138);
 }
-.case-list-div li:hover{
+.case-list-div li:hover {
   list-style: none;
   font-family: var(--primary-font);
   padding: 0.5rem 7rem 0.5rem 7rem;
@@ -251,20 +243,20 @@ padding: 2.85rem;
   color: white;
   transition: all 0.6s;
 }
-.case-list-div h2{
+.case-list-div h2 {
   font-family: var(--primary-font);
   padding: 1rem;
 }
-.case-list-div{
+.case-list-div {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 3rem;
- background-color: white;
- height:29.2rem;
+  background-color: white;
+  height: 29.2rem;
 }
-.biggest-createprofile{
+.biggest-createprofile {
   display: flex;
   justify-content: center;
   align-items: center;
