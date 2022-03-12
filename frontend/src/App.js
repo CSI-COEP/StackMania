@@ -16,12 +16,11 @@ const firebaseConfig = {
   storageBucket: "digi-court.appspot.com",
   messagingSenderId: "628892067154",
   appId: "1:628892067154:web:13190b7ba40d2145af868b",
-  measurementId: "G-0GMH3EJCPL"
+  measurementId: "G-0GMH3EJCPL",
 };
 
 initializeApp(firebaseConfig);
 getAnalytics();
-
 
 function App() {
   return (
