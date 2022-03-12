@@ -10,8 +10,9 @@ mongoose.connect(process.env.DB_URI!!);
     undefined -> error
 */
 const addUser = async (
-  email: String,
-  role: Role
+  email: string,
+  role: Role,
+  name: string | undefined = undefined
 ): Promise<any | null | undefined> => {
   try {
     const user = await USERS.findOne({
@@ -25,6 +26,7 @@ const addUser = async (
     const createdUser = await USERS.create({
       email,
       role,
+      name,
     });
 
     return createdUser;
@@ -34,7 +36,7 @@ const addUser = async (
   }
 };
 
-const findUser = async (email: string, role: Role) => {
+const findUser = async (email: string, role: Role | undefined = undefined) => {
   try {
     const user = await USERS.findOne({
       email,

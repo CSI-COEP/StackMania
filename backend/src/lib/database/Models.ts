@@ -4,6 +4,12 @@ const USERS_SCHEMA = new Schema({
   name: String,
   email: String,
   role: String,
+  region: {
+    type: String,
+    default: "",
+    trim: true,
+    lowercase: true,
+  },
 });
 
 const CASES_SCHEMA = new Schema({
@@ -36,4 +42,3 @@ const USERS = mongoose.model("users", USERS_SCHEMA);
 const CASES = mongoose.model("cases", CASES_SCHEMA);
 
 export { USERS, CASES };
-

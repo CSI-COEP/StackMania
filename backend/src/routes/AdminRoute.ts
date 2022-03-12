@@ -14,7 +14,7 @@ router.post("/add-user", async (req: CourtRequest, res) => {
     return;
   }
 
-  const { email, password, role } = req.body;
+  const { name, email, password, role } = req.body;
 
   const user = await findUser(req.user?.email!!, "MAIN_ADMIN");
 
@@ -36,7 +36,7 @@ router.post("/add-user", async (req: CourtRequest, res) => {
     return;
   }
 
-  const databaseRoleUser = await addUser(email, role);
+  const databaseRoleUser = await addUser(email, role, name);
 
   if (!databaseRoleUser) {
     res.json({
