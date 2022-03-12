@@ -10,6 +10,7 @@ const adminlogin = () => {
     
     <div className='big-signup-div'>
         <div className='signup-card'>
+        <box-icon name='user-circle' type='filled' color='#0471d3' ></box-icon>
             <p className='signup-header'>Admin Login</p>
             
             <input type='text' placeholder='Court Region'></input>
