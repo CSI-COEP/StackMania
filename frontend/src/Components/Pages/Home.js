@@ -1,5 +1,4 @@
 import React from 'react'
-import Select from '../Select'
 const Home = () => { 
 
   
@@ -10,7 +9,7 @@ const Home = () => {
         <div className='left-home'>
             <img src='./Images/justicelogo.png' className="justicelogo" alt='justice'></img>
             <div className='welcome-note'>Welcome to DigiCourt!</div>
-            <Select />
+            
             <div>
    
   </div>
