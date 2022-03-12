@@ -1,15 +1,24 @@
 import React from 'react'
+
+
 const Home = () => { 
 
   
-
+  
+    const [age, setAge] = React.useState('');
+  
+    const handleChange = (event) => {
+      setAge(event.target.value);
+    };
+  
   return (
   <>
     <div className='big-home-div'>
         <div className='left-home'>
             <img src='./Images/justicelogo.png' className="justicelogo" alt='justice'></img>
             <div className='welcome-note'>Welcome to DigiCourt!</div>
-            
+
+         
             <div>
    
   </div>

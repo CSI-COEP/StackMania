@@ -11,7 +11,7 @@ export default class CreateProfile extends Component {
 
   profile = (e) => {
     e.preventDefault();
-    if(!["LAWYER","ADVOCATE","SUBADMIN","POLICE","USER"].includes(this.state.role)){
+    if(!["LAWYER","ADVOCATE","SUBADMIN","POLICE","USER","JUDGE"].includes(this.state.role)){
       alert("You can Only create profile of Judge,Lawyer,Advocate,User and Subadmins");
       return;
     }
@@ -33,6 +33,15 @@ export default class CreateProfile extends Component {
            <input type="password" value={this.state.password} onChange={(e) => this.setState({password:e.target.value})} placeholder='Create Password' required></input>
            <button type="submit" className='signup-btn'>CREATE</button>
        </form>
+      </div>
+
+      <div className='case-list-div'>
+        <h2>Cases Received from Police</h2>
+        <li>Case 1</li>
+        <li>Case 2</li>
+        <li>Case 3</li>
+        <li>Case 4</li>
+        <li>Case 5</li>
       </div>
       </div>
       </>
