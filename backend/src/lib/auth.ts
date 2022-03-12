@@ -7,6 +7,7 @@ const verifyToken = async (token: string) => {
 
     return user;
   } catch (error) {
+    console.log(error);
     return null;
   }
 };
@@ -29,4 +30,3 @@ const createUser = async (
 };
 
 export { verifyToken, createUser };
-

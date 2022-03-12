@@ -5,6 +5,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import axios from "axios";
 
 const Adminlogin = () => {
   const navigate = useNavigate();

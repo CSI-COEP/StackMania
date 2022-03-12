@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { getAuth } from "firebase/auth";
 
 export default class CreateProfile extends Component {
   state = {
@@ -8,6 +9,33 @@ export default class CreateProfile extends Component {
     mail: "",
     password: "",
   };
+
+  
+
+  fetchData = async () => {
+    try {
+      const token = await getAuth().currentUser.getIdToken();
+
+      const res = axios.request({
+        method: "GET",
+        url: "/user",
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      });
+
+      console.log(res);
+    } catch (error) {
+      window.location.replace("/adminlogin");
+      return;
+    }
+  };
+
+  componentDidMount () {
+    console.log("mounted");
+    this.fetchData().then();
+  };
+
 
   profile = async (e) => {
     e.preventDefault();
@@ -23,9 +51,14 @@ export default class CreateProfile extends Component {
     }
 
     try {
+      const token = await getAuth().currentUser.getIdToken();
+
       const res = await axios.request({
         method: "POST",
         url: "/admin/add-user",
+        headers: {
+          Authorization: "Bearer " + token,
+        },
         data: {
           role: this.state.role,
           name: this.state.name,

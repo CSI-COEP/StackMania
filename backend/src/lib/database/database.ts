@@ -36,7 +36,20 @@ const addUser = async (
   }
 };
 
-const findUser = async (email: string, role: Role | undefined = undefined) => {
+const findUserWithEmail = async (email: string) => {
+  try {
+    const user = await USERS.findOne({
+      email,
+    });
+
+    return user;
+  } catch (error) {
+    console.log(error);
+    return undefined;
+  }
+};
+
+const findUserWithRole = async (email: string, role: Role) => {
   try {
     const user = await USERS.findOne({
       email,
@@ -79,7 +92,8 @@ export {
   mongoose,
   // user related
   addUser,
-  findUser,
+  findUserWithEmail,
+  findUserWithRole,
   // case related
   createCase,
   findCases,

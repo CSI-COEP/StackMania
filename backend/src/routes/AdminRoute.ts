@@ -1,7 +1,10 @@
 import { Router } from "express";
 import { CourtRequest } from "../../typings/custom";
 import { createUser } from "../lib/auth";
-import { addUser, findUser } from "../lib/database/database";
+import {
+  addUser,
+  findUserWithRole as findUser,
+} from "../lib/database/database";
 
 const router = Router();
 

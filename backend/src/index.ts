@@ -1,9 +1,10 @@
 require("dotenv").config();
+import "./lib/firebase";
 import cors from "cors";
 import express, { NextFunction, Response } from "express";
 import { CourtRequest } from "../typings/custom";
 import { verifyToken } from "./lib/auth";
-import { findUser } from "./lib/database/database";
+import { findUserWithEmail } from "./lib/database/database";
 import AdminRoute from "./routes/AdminRoute";
 const app = express();
 
@@ -19,11 +20,12 @@ app.use(async (req: CourtRequest, res: Response, next: NextFunction) => {
         error: true,
         message: "Unauthorized",
       });
+      return;
     }
     req.user = decodedToken;
+  } else {
+    req.user = null;
   }
-
-  req.user = null;
 
   next();
 });
@@ -39,12 +41,12 @@ app.get("/user", async (req: CourtRequest, res) => {
   if (!req.user) {
     res.status(401).json({
       error: true,
-      message: "Unauthorized",
+      message: "Unauthorized, no user found",
     });
     return;
   }
 
-  const databaseData = await findUser(req.user.email!!);
+  const databaseData = await findUserWithEmail(req.user.email!!);
   if (!databaseData) {
     res.status(500).json({
       error: true,

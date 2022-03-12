@@ -5,7 +5,7 @@ import {
   addUser,
   createCase,
   findCases,
-  findUser,
+  findUserWithRole as findUser,
 } from "../lib/database/database";
 
 const router = Router();
