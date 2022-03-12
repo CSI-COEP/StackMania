@@ -5,14 +5,11 @@ import Signup from './Components/Signup';
 import Login from './Components/Login';
 import Navbar from './Components/Navbar';
 import Adminlogin from './Components/Adminlogin';
+import Dashboard from './Components/Pages/Dashboard';
 
 function App() {
 
-  const OptionHandler = (option) => {
-  
-    setOptions([...options, {id:Math.random() * 1000, ...option}])
-    
-  }
+ 
   return (
     <>
     <BrowserRouter>
@@ -23,6 +20,8 @@ function App() {
      <Route path='/signup' element={<Signup/>}></Route>
      <Route path='/login' element={<Login/>}></Route>
      <Route path='/adminlogin' element={<Adminlogin/>}></Route>
+     <Route path='adminlogin/dashboard' element={<Dashboard/>}></Route>
+     
     </Routes>
     </BrowserRouter>
     </>

@@ -6,15 +6,19 @@ const Login = () => {
     <>
   
     <div className='big-signup-div'>
+    
         <div className='signup-card'>
+        
             <p className='signup-header'>Login</p>
             
-            <input type="text" placeholder="Email"></input>
-            <input type="password" placeholder="Password"></input>
-            <button className='signup-btn'>LOGIN</button>
+            <input type="text" placeholder="Email" required></input>
+            <input type="password" placeholder="Password" required></input>
+            <button type="submit" className='signup-btn'>LOGIN</button>
 
             <Link to="/adminlogin" className='admin-login-text'>↗️Admin Login</Link>
+            
         </div>
+        
     </div>
     </>
   )
