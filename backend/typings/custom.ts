@@ -11,6 +11,13 @@ export interface CreateCaseCall {
   bookedUnder: string;
   documentId?: string[];
 }
+
+export interface SearchQuery {
+  closed?: boolean;
+  courtNumber?: number;
+  court?: string;
+  lawyer?: string;
+}
 export interface CourtRequest extends Request {
   user?: DecodedIdToken | null;
 }

@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { CreateCaseCall, Role } from "../../../typings/custom";
+import { CreateCaseCall, Role, SearchQuery } from "../../../typings/custom";
 import { CASES, USERS } from "./Models";
 
 mongoose.connect(process.env.DB_URI!!);
@@ -62,6 +62,17 @@ const createCase = async (caseCreateOptions: CreateCaseCall) => {
   }
 };
 
+const findCases = async (searchObject: SearchQuery) => {
+  try {
+    const casesFound = await CASES.find(searchObject);
+
+    return casesFound;
+  } catch (error) {
+    console.log(error);
+    return undefined;
+  }
+};
+
 export {
   mongoose,
   // user related
@@ -69,5 +80,5 @@ export {
   findUser,
   // case related
   createCase,
+  findCases,
 };
-
