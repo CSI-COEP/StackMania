@@ -36,3 +36,4 @@ const USERS = mongoose.model("users", USERS_SCHEMA);
 const CASES = mongoose.model("cases", CASES_SCHEMA);
 
 export { USERS, CASES };
+

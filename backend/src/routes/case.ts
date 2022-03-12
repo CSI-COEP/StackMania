@@ -2,7 +2,6 @@ import { Response, Router } from "express";
 import { CourtRequest } from "../../typings/custom";
 import { createUser } from "../lib/auth";
 import { addUser, createCase, findUser } from "../lib/database/database";
-import prisma from "../lib/prisma";
 
 const router = Router();
 

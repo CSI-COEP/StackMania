@@ -1,11 +1,8 @@
 require("dotenv").config();
-import express, { NextFunction, Response } from "express";
 import cors from "cors";
-import { verifyToken } from "./lib/auth";
+import express, { NextFunction, Response } from "express";
 import { CourtRequest } from "../typings/custom";
-
-import "./lib/database/database";
-
+import { verifyToken } from "./lib/auth";
 const app = express();
 
 app.use(cors());
