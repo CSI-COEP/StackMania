@@ -31,6 +31,8 @@ router.post("/create", async (req: CourtRequest, res: Response) => {
     return;
   }
 
+  console.log(req.body);
+
   const lawyer = await findUser(lawyerMail, "LAWYER");
 
   if (!lawyer) {
