@@ -8,7 +8,7 @@ import {
 
 const router = Router();
 
-router.post("/add-user", async (req: CourtRequest, res) => {
+router.use(async (req: CourtRequest, res, next) => {
   if (!req.user) {
     res.status(401).json({
       error: true,
@@ -16,8 +16,6 @@ router.post("/add-user", async (req: CourtRequest, res) => {
     });
     return;
   }
-
-  const { name, email, password, role } = req.body;
 
   const user = await findUser(req.user?.email!!, "MAIN_ADMIN");
 
@@ -28,6 +26,12 @@ router.post("/add-user", async (req: CourtRequest, res) => {
     });
     return;
   }
+
+  next();
+});
+
+router.post("/add-user", async (req: CourtRequest, res) => {
+  const { name, email, password, role } = req.body;
 
   const createdUser = await createUser(email, password);
 
@@ -56,5 +60,7 @@ router.post("/add-user", async (req: CourtRequest, res) => {
 
   return;
 });
+
+router.get("/");
 
 export default router;
