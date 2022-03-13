@@ -10,32 +10,6 @@ export default class CreateProfile extends Component {
     password: "",
   };
 
-  
-
-  fetchData = async () => {
-    try {
-      const token = await getAuth().currentUser.getIdToken();
-
-      const res = axios.request({
-        method: "GET",
-        url: "/user",
-        headers: {
-          Authorization: "Bearer " + token,
-        },
-      });
-
-      console.log(res);
-    } catch (error) {
-      window.location.replace("/adminlogin");
-      return;
-    }
-  };
-
-  componentDidMount () {
-    console.log("mounted");
-    this.fetchData().then();
-  };
-
 
   profile = async (e) => {
     e.preventDefault();
