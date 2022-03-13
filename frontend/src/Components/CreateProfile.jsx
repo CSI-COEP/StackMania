@@ -10,7 +10,6 @@ export default class CreateProfile extends Component {
     password: "",
   };
 
-
   profile = async (e) => {
     e.preventDefault();
     if (
@@ -95,6 +94,7 @@ export default class CreateProfile extends Component {
               ></input>
               <input
                 type="password"
+                min={6}
                 value={this.state.password}
                 onChange={(e) => this.setState({ password: e.target.value })}
                 placeholder="Create Password"

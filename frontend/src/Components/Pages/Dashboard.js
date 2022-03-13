@@ -28,7 +28,7 @@ const Dashboard = () => {
         },
       });
 
-      if (res.data.role.toUpperCase() === "MAIN_ADMIN") {
+      if (res.data.role.toUpperCase() !== "MAIN_ADMIN") {
         navigate("/adminlogin")
         return
       }
