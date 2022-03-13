@@ -36,6 +36,10 @@ const CASES_SCHEMA = new Schema({
     type: Schema.Types.Mixed,
     default: null,
   },
+  state: {
+    type: String,
+    default: "pending_confirmation",
+  },
 });
 
 const USERS = mongoose.model("users", USERS_SCHEMA);

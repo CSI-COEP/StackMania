@@ -74,4 +74,10 @@ router.get("/data", async (req: CourtRequest, res) => {
   });
 });
 
+router.get("/cases", async (req: CourtRequest, res) => {
+  const allData = await findCases({ state: "pending_confirmation" });
+
+  res.json(allData);
+});
+
 export default router;

@@ -14,6 +14,7 @@ export interface CreateCaseCall {
 
 export interface SearchQuery {
   closed?: boolean;
+  state?: string;
   courtNumber?: number;
   court?: string;
   by?: string;
