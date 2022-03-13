@@ -48,9 +48,10 @@ const Login = () => {
             required
           ></input>
 
-          <button onClick={onSignInClicked} className="signup-btn">
+         <Link to="/profile"> <button onClick={onSignInClicked} className="signup-btn">
             LOGIN
           </button>
+          </Link>
             <div className="policeadmin">
           <Link to="/adminlogin" className="admin-login-text">
             ↗️Admin Login

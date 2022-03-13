@@ -45,7 +45,7 @@ a {
   list-style: none;
   background-color: #e7893c;
   padding: 0.7rem;
-  border-radius: 0.7rem;
+  border-radius: 0.5rem;
 }
 .menu-div {
   display: flex;
@@ -298,17 +298,43 @@ input {
   margin: 0.3rem auto; 
   
 }
+.profile-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  gap: 1rem;
+  font-family: var(--primary-font);
+}
+.Big-Profile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+}
 .generate-case-div{
   font-family: var(--primary-font);
   text-align: left;
   padding: 5rem;
   height: 80vh;
   display: flex;
+  align-items: center;
  justify-content: center;
-  flex-direction: column;
+ gap: 2rem;
+
 }
 .fileinput{
   background-color: #cc6d00;
+}
+.case-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: var(--primary-font);
+  padding-top: 0;
 }
 @media screen and (max-width:768px){
   
@@ -394,6 +420,14 @@ input {
   }
   .case-list-div{
     width: 95%;
+  }
+  .profile-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: var(--primary-font);
   }
   
 }

@@ -23,11 +23,24 @@ const PoliceDashboard = () => {
 
   return (
     <div className='generate-case-div'>
+      <div>
       <h2>Generate Case Instructions : </h2>
-      <li>Fill all the required details in Case form provided with official letterhead of police station</li>
+      <li>Fill all the required details in case-form official letterhead of police station</li>
+      <li>Also fill the form given on the right side</li>
       <li>File should be uploaded in ".pdf",".doc" format</li>
       <li>Upload it Below</li>
       <input onChange={onFileChange} className='fileinput' type="file" placeholder='Upload Filled Form Here...'></input>
+      </div>
+
+      <div className='case-form'>
+        <h3>Case Form</h3>
+        <input type="text" placeholder="Enter User mailID"></input>
+        <input type="text" placeholder="Enter Lawyer mailID"></input>
+        <input type="text" placeholder="Booked Under Section"></input>
+        <button className="signup-btn">
+           SUBMIT
+          </button>
+      </div>
     </div>
   )
 }

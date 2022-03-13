@@ -11,6 +11,7 @@ import Dashboard from "./Components/Pages/Dashboard";
 import Footer from "./Components/Footer";
 import Policelogin from "./Components/Policelogin";
 import PoliceDashboard from "./Components/Pages/PoliceDashboard";
+import Profile from "./Components/Pages/Profile";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAO-kgOwStk6cpclFC9WsctI2p26xqpYlw",
@@ -38,6 +39,7 @@ function App() {
           <Route path="/admin" element={<Dashboard />}></Route>
           <Route path="/policelogin" element={<Policelogin />}></Route>
           <Route path="/policedash" element={<PoliceDashboard />}></Route>
+          <Route path="/profile" element={<Profile />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>
