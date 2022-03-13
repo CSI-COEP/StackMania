@@ -6,6 +6,7 @@ import { CourtRequest } from "../typings/custom";
 import { verifyToken } from "./lib/auth";
 import { findUserWithEmail } from "./lib/database/database";
 import AdminRoute from "./routes/AdminRoute";
+import CaseRoute from "./routes/CaseRoute";
 const app = express();
 
 app.use(cors());
@@ -65,6 +66,3 @@ app.get("/user", async (req: CourtRequest, res) => {
 app.listen(process.env.PORT || 3000, () =>
   console.log(`🚀 Server ready at: ${process.env.PORT || 3000}`)
 );
-function CaseRoute(arg0: string, CaseRoute: any) {
-  throw new Error("Function not implemented.");
-}
