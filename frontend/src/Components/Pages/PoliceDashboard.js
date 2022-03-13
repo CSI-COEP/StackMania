@@ -37,13 +37,15 @@ const PoliceDashboard = () => {
       </div>
 
       <div className='case-form'>
+        <form>
         <h3>Case Form</h3>
-        <input value={userMail} onChange={event => setUserMail(event.target.value)} type="text" placeholder="Enter User mailID"></input>
-        <input value={lawyerMail} onChange={event => setLawyerMail(event.target.value)} type="text" placeholder="Enter Lawyer mailID"></input>
-        <input value={bookedUnder} onChange={event => setBokoedUnder(event.target.value)} type="text" placeholder="Booked Under Section"></input>
+        <input value={userMail} onChange={event => setUserMail(event.target.value)} type="text" placeholder="Enter User mailID" required></input>
+        <input value={lawyerMail} onChange={event => setLawyerMail(event.target.value)} type="text" placeholder="Enter Lawyer mailID" required></input>
+        <input value={bookedUnder} onChange={event => setBokoedUnder(event.target.value)} type="text" placeholder="Booked Under Section" required></input>
         <button className="signup-btn">
           SUBMIT
         </button>
+        </form>
       </div>
     </div>
   )

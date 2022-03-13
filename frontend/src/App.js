@@ -13,6 +13,7 @@ import Policelogin from "./Components/Policelogin";
 import PoliceDashboard from "./Components/Pages/PoliceDashboard";
 import Profile from "./Components/Pages/Profile";
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyAO-kgOwStk6cpclFC9WsctI2p26xqpYlw",
   authDomain: "digi-court.firebaseapp.com",
