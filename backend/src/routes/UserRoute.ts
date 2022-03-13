@@ -40,8 +40,6 @@ router.get("/cases", async (req: CourtRequest, res) => {
 
   const databaseData = await findCases({
     by: req.user.email!!,
-    for: req.body.email!!,
-    lawyer: req.body.email!!,
   });
   console.log(databaseData);
   if (!databaseData) {
