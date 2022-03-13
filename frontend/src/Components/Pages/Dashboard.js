@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"
 import CreateProfile from "../CreateProfile";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -10,6 +10,7 @@ import axios from "axios"
 
 const Dashboard = () => {
   const navigate = useNavigate();
+  const [data, setData] = useState(null);
 
   useEffect(() => {
     fetchData().then()
@@ -32,6 +33,15 @@ const Dashboard = () => {
         navigate("/adminlogin")
         return
       }
+
+      const { data } = await axios.request({
+        method: "GET",
+        url: "/admin/data",
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      });
+      setData(data);
     } catch (error) {
       navigate("/adminlogin");
       return;

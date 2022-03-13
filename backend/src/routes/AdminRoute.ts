@@ -3,6 +3,7 @@ import { CourtRequest } from "../../typings/custom";
 import { createUser } from "../lib/auth";
 import {
   addUser,
+  findCases,
   findUserWithRole as findUser,
 } from "../lib/database/database";
 
@@ -61,6 +62,16 @@ router.post("/add-user", async (req: CourtRequest, res) => {
   return;
 });
 
-router.get("/");
+router.get("/data", async (req: CourtRequest, res) => {
+  const closedData = await findCases({ closed: true });
+  const openData = await findCases({ closed: false });
+  const allData = await findCases({});
+
+  res.json({
+    closedData,
+    openData,
+    allData,
+  });
+});
 
 export default router;
