@@ -18,7 +18,6 @@ const Adminlogin = () => {
     getAuth().onAuthStateChanged((user) => {
       if (user) {
         console.log(user);
-        navigate("/admin");
         return
       }
     });

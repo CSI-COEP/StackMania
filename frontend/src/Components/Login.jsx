@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -21,6 +23,8 @@ const Login = () => {
   const onSignInClicked = async () => {
     try {
       await signInWithEmailAndPassword(getAuth(), username, password);
+
+      navigate("/profile");
     } catch (error) {
       console.log(error);
     }
@@ -48,17 +52,19 @@ const Login = () => {
             required
           ></input>
 
-         <Link to="/profile"> <button onClick={onSignInClicked} className="signup-btn">
-            LOGIN
-          </button>
+          <Link to="/profile">
+            {" "}
+            <button onClick={onSignInClicked} className="signup-btn">
+              LOGIN
+            </button>
           </Link>
-            <div className="policeadmin">
-          <Link to="/adminlogin" className="admin-login-text">
-            ↗️Admin Login
-          </Link>
-          <Link to="/policelogin" className="admin-login-text">
-            ↗️Police Login
-          </Link>
+          <div className="policeadmin">
+            <Link to="/adminlogin" className="admin-login-text">
+              ↗️Admin Login
+            </Link>
+            <Link to="/policelogin" className="admin-login-text">
+              ↗️Police Login
+            </Link>
           </div>
         </div>
       </div>
