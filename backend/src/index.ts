@@ -7,6 +7,7 @@ import { verifyToken } from "./lib/auth";
 import { findUserWithEmail } from "./lib/database/database";
 import AdminRoute from "./routes/AdminRoute";
 import CaseRoute from "./routes/CaseRoute";
+import UserRoute from "./routes/UserRoute";
 const app = express();
 
 app.use(cors());
@@ -33,34 +34,10 @@ app.use(async (req: CourtRequest, res: Response, next: NextFunction) => {
 
 app.use("/admin", AdminRoute);
 app.use("/case", CaseRoute);
+app.use("/user", UserRoute);
 
 app.get("/", async (req, res) => {
   res.json({ message: "Hello World" });
-});
-
-app.get("/user", async (req: CourtRequest, res) => {
-  if (!req.user) {
-    res.status(401).json({
-      error: true,
-      message: "Unauthorized, no user found",
-    });
-    return;
-  }
-
-  const databaseData = await findUserWithEmail(req.user.email!!);
-  if (!databaseData) {
-    res.status(500).json({
-      error: true,
-      message: "Database error",
-    });
-    return;
-  }
-
-  res.json({
-    user: req.user,
-    dbUser: databaseData,
-    role: databaseData.role,
-  });
 });
 
 app.listen(process.env.PORT || 3000, () =>

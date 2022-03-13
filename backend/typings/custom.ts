@@ -16,6 +16,8 @@ export interface SearchQuery {
   closed?: boolean;
   courtNumber?: number;
   court?: string;
+  by?: string;
+  for?: string;
   lawyer?: string;
 }
 export interface CourtRequest extends Request {
