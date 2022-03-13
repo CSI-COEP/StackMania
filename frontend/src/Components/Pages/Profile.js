@@ -46,7 +46,7 @@ const Profile = () => {
         ) : (
           <div className='profile-div'>
             <div className='card-purple'>Case ID : {data[0]._id}</div>
-            <div className='card-green'>Status : {data[0].open ? "Ongoing" : "Closed"}</div>
+            <div className='card-green'>Status : {!data[0].closedAt ? "Ongoing" : "Closed"}</div>
             <div className='card'>Hearing : 13/03/2022</div>
           </div>
         )
