@@ -271,6 +271,7 @@ input {
   align-items: center;
   flex-direction: column;
   padding: 3rem;
+  background-color: bisque;
 }
 .footer-logo{
   display: flex;
@@ -297,16 +298,25 @@ input {
   margin: 0.3rem auto; 
   
 }
+.generate-case-div{
+  font-family: var(--primary-font);
+  text-align: left;
+  padding: 5rem;
+  height: 80vh;
+  display: flex;
+ justify-content: center;
+  flex-direction: column;
+}
+.fileinput{
+  background-color: #cc6d00;
+}
 @media screen and (max-width:768px){
   
   .hamburger{
       display: block;
       cursor: pointer;
   }
-  header.sticky a{
-    color: rgb(255, 255, 255);
-     
-  }
+  
   .menu-div{
       position: fixed;
       left: -100%;
@@ -332,7 +342,7 @@ input {
     align-items: center;
     
   }
-  .menu-div li{
+  .menu-div a li{
     padding: 0;
   }
   .menu-div.active{

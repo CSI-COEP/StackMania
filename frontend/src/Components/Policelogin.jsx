@@ -7,7 +7,7 @@ import "aos/dist/aos.css";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import axios from "axios";
 
-const Adminlogin = () => {
+const Policelogin = () => {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -26,7 +26,7 @@ const Adminlogin = () => {
     try {
       await signInWithEmailAndPassword(getAuth(), username, password);
 
-      navigate("/admin");
+      navigate("/police");
     } catch (error) {
       console.log(error);
     }
@@ -37,7 +37,7 @@ const Adminlogin = () => {
       <div className="big-signup-div">
         <div className="signup-card" data-aos="fade-down">
           <box-icon name="user-circle" type="filled" color="#0471d3"></box-icon>
-          <p className="signup-header">Admin Login</p>
+          <p className="signup-header">Police Login</p>
 
           <input type="text" placeholder="Court Region"></input>
           <input
@@ -55,13 +55,14 @@ const Adminlogin = () => {
             required
           ></input>
 
-          <button onClick={onSignInClicked} className="signup-btn">
+         <Link to="/policedash" ><button onClick={onSignInClicked} className="signup-btn">
             LOGIN
           </button>
+          </Link>
         </div>
       </div>
     </>
   );
 };
 
-export default Adminlogin;
+export default Policelogin;
