@@ -31,6 +31,8 @@ router.post("/create", async (req: CourtRequest, res: Response) => {
     return;
   }
 
+  console.log(req.body);
+
   const lawyer = await findUser(lawyerMail, "LAWYER");
 
   if (!lawyer) {
@@ -44,14 +46,14 @@ router.post("/create", async (req: CourtRequest, res: Response) => {
   let user = await findUser(byMail, "USER");
 
   if (!user) {
-    await createUser(byMail, "123");
+    await createUser(byMail, "123456");
     user = await addUser(byMail, "USER");
   }
 
   let forUser = await findUser(forMail, "USER");
 
   if (!forUser) {
-    await createUser(forMail, "123");
+    await createUser(forMail, "123456");
     forUser = await addUser(forMail, "USER");
   }
 
